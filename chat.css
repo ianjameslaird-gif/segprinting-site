@@ -1,0 +1,17 @@
+#cb{position:fixed;right:18px;bottom:18px;z-index:9999;font:15px/1.4 system-ui,sans-serif}
+#cb-btn{width:58px;height:58px;border-radius:50%;border:0;background:var(--cb-a);color:var(--cb-at);font-size:26px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);float:right}
+#cb-panel{position:absolute;right:0;bottom:70px;width:340px;max-width:calc(100vw - 36px);height:480px;max-height:calc(100vh - 110px);background:var(--cb-bg);color:var(--cb-fg);border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.4);display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--cb-b)}
+#cb-panel[hidden]{display:none}
+#cb-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--cb-hd);color:var(--cb-hdt)}
+#cb-x{background:none;border:0;color:inherit;font-size:24px;cursor:pointer}
+#cb-log{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.cb-m{max-width:85%;padding:8px 11px;border-radius:12px}
+.cb-bot{background:var(--cb-bb);align-self:flex-start}.cb-me{background:var(--cb-a);color:var(--cb-at);align-self:flex-end}
+.cb-ha{margin-top:6px}.cb-h{display:inline-block;margin-top:4px;padding:5px 10px;border-radius:20px;background:var(--cb-a);color:var(--cb-at)!important;text-decoration:none;font-weight:600;font-size:13px}
+.cb-h2{background:transparent;border:1px solid var(--cb-a);color:var(--cb-fg)!important}
+#cb-q{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;border-top:1px solid var(--cb-b)}
+#cb-q button{border:1px solid var(--cb-a);background:transparent;color:var(--cb-fg);border-radius:16px;padding:4px 10px;font-size:13px;cursor:pointer}
+#cb-f{display:flex;border-top:1px solid var(--cb-b)}#cb-i{flex:1;border:0;padding:12px;background:transparent;color:var(--cb-fg);font-size:16px;outline:none}
+#cb-f button{border:0;background:var(--cb-a);color:var(--cb-at);padding:0 16px;font-weight:700;cursor:pointer}
+@media(max-width:480px){#cb{right:12px;bottom:12px}#cb-panel{position:fixed;right:8px;left:8px;bottom:80px;width:auto;max-width:none;height:70vh}}
+#cb{--cb-a:#ff2d95;--cb-at:#fff;--cb-bg:#fff;--cb-fg:#222;--cb-b:#eee;--cb-hd:linear-gradient(90deg,#ff2d95,#ff8a00);--cb-hdt:#fff;--cb-bb:#e6fbff}#cb-btn{background:linear-gradient(135deg,#ff2d95,#ff8a00)}
