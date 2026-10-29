@@ -36,3 +36,7 @@
 .shimmer .ch{color:transparent;background:linear-gradient(90deg,var(--m),var(--o),#fff200,var(--c),var(--m));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;animation:chIn .9s cubic-bezier(.2,.8,.2,1) both,shim 6s linear infinite;animation-delay:calc(var(--i)*45ms + .15s),0s}
 .cine h1{font-size:clamp(2.8rem,7vw,6rem)}
 @media(prefers-reduced-motion:reduce){.shimmer .ch{animation:none!important;opacity:1;filter:none;transform:none}}
+.glass .sl{position:absolute;top:10px;left:10px;width:calc(100% - 20px);height:calc(100% - 20px)!important;object-fit:cover;opacity:0;transition:opacity 1.2s ease;border-radius:22px}
+.glass .sl.on{opacity:1}.glass .kb{animation:kb 7s ease-out forwards}@keyframes kb{from{scale:1}to{scale:1.06}}
+.glass{overflow:hidden}.glass>img:first-child{height:auto;aspect-ratio:1206/1570;object-fit:cover}
+@media(prefers-reduced-motion:reduce){.glass .sl{display:none}}

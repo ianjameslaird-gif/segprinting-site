@@ -20,3 +20,13 @@ if(!mob)hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRe
 addEventListener('scroll',()=>{sy=Math.min(scrollY,900);q()},{passive:true})}
 const els=document.querySelectorAll('main section:not(.cine), .offer');if(!RM&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(s=>{if(s.getBoundingClientRect().top>innerHeight){s.classList.add('rv');io.observe(s)}})}
 })();
+(()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const go=()=>document.querySelectorAll('.glass[data-slides]').forEach((g,gi)=>{const L=g.dataset.slides.split('|').map(x=>x.split('::'));
+const base=g.querySelector('img');L.unshift([base.getAttribute('src'),base.alt]);
+const mk=()=>{const i=new Image();i.className='sl';i.width=691;i.height=900;i.decoding='async';i.setAttribute('aria-hidden','true');g.appendChild(i);return i};
+L.slice(1).forEach(([s])=>{new Image().src=s});const ly=[mk(),mk()];let k=0,c=0;
+const step=()=>{if(document.hidden)return;k=(k+1)%L.length;const n=ly[c];c^=1;const o=ly[c];
+n.src=L[k][0];n.alt=L[k][1];n.classList.remove('kb');void n.offsetWidth;n.classList.add('on','kb');o.classList.remove('on')};
+window.__heroStep=window.__heroStep||[];window.__heroStep.push(step);
+setTimeout(()=>{step();setInterval(step,5000)},5000+gi*2500)});
+document.readyState==='complete'?go():addEventListener('load',go)})();
